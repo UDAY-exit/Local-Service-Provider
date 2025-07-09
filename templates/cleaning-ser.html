@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/cleaning-ser.css') }}"
+    />
+</head>
+<body>
+      {% include 'nav.html'  %}
+  {% block title %}{% endblock %}
+
+  {% block main %}
+  {% endblock %}
+
+
+ <main>
+  <div class="holder">
+    <!-- Hero Section -->
+    <section class="hero">
+      <img class="hero-bg" src="https://storage.googleapis.com/a1aa/image/e51cb69d-cee1-4f14-2127-ed66fc1ddbf3.jpg" alt="Modern cleaning service"/>
+      <h1>LOCO Cleaning Services</h1>
+      <h2>Reliable Cleaning Services You Can Trust</h2>
+      <p>From home deep cleaning to office maintenance, our expert cleaners deliver sparkling results with a smile.</p>
+      <a href="#booking" id="freeQuoteBtn">Get a Free Quote</a>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+      <h3>Our Services</h3>
+      <div class="service-grid">
+        <article class="service-card" data-service="Home Deep Cleaning" data-price="80">
+          <img src="https://storage.googleapis.com/a1aa/image/463a3cdd-ea89-4ba9-4bf2-1ee50a5eb523.jpg" alt="Home Deep Cleaning" />
+          <h4>Home Deep Cleaning</h4>
+          <p class="price">$80 / hour</p>
+          <p>Thorough cleaning of all rooms, including kitchens, bathrooms, and living areas.</p>
+        </article>
+
+        <article class="service-card" data-service="Office Cleaning" data-price="75">
+          <img src="https://storage.googleapis.com/a1aa/image/2babc063-1ed2-463f-b6fd-0823005160a9.jpg" alt="Office Cleaning" />
+          <h4>Office Cleaning</h4>
+          <p class="price">$75 / hour</p>
+          <p>Professional cleaning services for offices, including desks, floors, and common areas.</p>
+        </article>
+
+        <article class="service-card" data-service="Carpet Cleaning" data-price="85">
+          <img src="https://storage.googleapis.com/a1aa/image/23d86611-c1f3-4821-d562-ee0ac40f505d.jpg" alt="Carpet Cleaning" />
+          <h4>Carpet Cleaning</h4>
+          <p class="price">$85 / hour</p>
+          <p>Deep cleaning and stain removal for carpets to refresh and extend their life.</p>
+        </article>
+
+        <article class="service-card" data-service="Window Cleaning" data-price="70">
+          <img src="https://storage.googleapis.com/a1aa/image/3e911823-82a0-472a-5fed-a05f6045e588.jpg" alt="Window Cleaning" />
+          <h4>Window Cleaning</h4>
+          <p class="price">$70 / hour</p>
+          <p>Sparkling clean windows inside and out for homes and commercial buildings.</p>
+        </article>
+
+        <article class="service-card" data-service="Move-In/Move-Out Cleaning" data-price="95">
+          <img src="https://storage.googleapis.com/a1aa/image/0572564f-98e5-457d-1f9e-aaa21e425e97.jpg" alt="Move-In/Move-Out" />
+          <h4>Move-In/Move-Out Cleaning</h4>
+          <p class="price">$95 / hour</p>
+          <p>Comprehensive cleaning to prepare your home for moving in or out.</p>
+        </article>
+
+        <article class="service-card" data-service="Post-Construction Cleaning" data-price="110">
+          <img src="https://storage.googleapis.com/a1aa/image/a415f412-cad3-4461-988e-2d84bcd04996.jpg" alt="Post-Construction" />
+          <h4>Post-Construction Cleaning</h4>
+          <p class="price">$110 / hour</p>
+          <p>Removing dust and debris after construction or renovation projects.</p>
+        </article>
+
+        <article class="service-card" data-service="Upholstery Cleaning" data-price="90">
+          <img src="https://storage.googleapis.com/a1aa/image/a1af0c6b-5849-47c0-1204-691e4fea7a5f.jpg" alt="Upholstery Cleaning" />
+          <h4>Upholstery Cleaning</h4>
+          <p class="price">$90 / hour</p>
+          <p>Cleaning of sofas, chairs, and other upholstered furniture.</p>
+        </article>
+
+        <article class="service-card" data-service="Green Cleaning" data-price="100">
+          <img src="https://storage.googleapis.com/a1aa/image/3a88e588-2276-443b-af99-e9a51af2bb9f.jpg" alt="Green Cleaning" />
+          <h4>Green Cleaning</h4>
+          <p class="price">$100 / hour</p>
+          <p>Eco-friendly cleaning using biodegradable, non-toxic products.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+      <h3>About LOCO Cleaning Services</h3>
+      <div class="about-content">
+        <img src="https://storage.googleapis.com/a1aa/image/d37f3c50-60f1-4810-67f6-9bbda5b6a31d.jpg" alt="About Us"/>
+        <p>With over 15 years of experience, LOCO Cleaning Services provides high-quality, eco-friendly cleaning solutions.</p>
+      </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section id="booking" class="booking">
+      <h3 id="bookingTitle">Book a Service</h3>
+
+      <form class="form" method="POST" action="{{ url_for('cleaning_enquiry') }}">
+        <label for="bookingName">Full Name</label>
+        <input type="text" id="bookingName" name="bookingName" placeholder="Your full name" required />
+
+        <label for="bookingPhone">Phone Number</label>
+        <input type="tel" id="bookingPhone" name="bookingPhone" placeholder="(123) 456-7890" required />
+
+        <label for="bookingAddress">Address</label>
+        <textarea id="bookingAddress" name="bookingAddress" placeholder="Your address" rows="3" required></textarea>
+
+        <label for="bookingService">Service</label>
+        <input type="text" id="bookingService" name="bookingService" readonly />
+
+        <label for="bookingPrice">Price per Hour</label>
+        <input type="text" id="bookingPrice" name="bookingPrice" readonly />
+
+        <button type="submit">Book Now</button>
+      </form>
+
+
+
+
+      <div class="contact-info">
+        <p><i class="fas fa-phone-alt"></i> Phone: (+91) 123-4567-890</p>
+        <p><i class="fas fa-envelope"></i> Email: lococleaning@.com</p>
+        <p><i class="fas fa-map-marker-alt"></i> hamirpur (HP)</p>
+      </div>
+    </section>
+    </div>
+  </main>
+
+   {% include 'footer.html'  %}
+ <script src="{{ url_for('static', filename='js/cleaning-ser.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{% block title %}{% endblock %}</title>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+       <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/footer.css') }}"
+    />
+</head>
+<body>
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-col">
+        <img alt="Loco company logo" class="footer-logo" src="static/assets/web-logo.png" />
+        <p class="footer-desc">
+          Reliable home services including plumbing, electrical, cleaning, and handyman solutions to keep your home running smoothly.
+        </p>
+        <div class="footer-social">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h3>Services</h3>
+        <ul>
+          <li><a href="plumbing">Plumbing</a></li>
+          <li><a href="cleaning">Cleaning</a></li>
+          <li><a href="electrical">Electrical</a></li>
+          <li><a href="home_repair">Home Repair</a></li>
+          
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Support</h3>
+        <ul>
+          <li><a href="#">Help Center</a></li>
+          <li><a href="#">Booking Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Contact Support</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Contact Us</h3>
+        <p>789 Service Lane<br />Suite 100<br />hamirpur, TX 75001</p>
+        <p>Phone: <a href="tel:+91876543210">+91 (987) 654-3210</a></p>
+        <p>Email: <a href="mailto:loco@.com">loco@.com</a></p>
+        <a class="subscribe-btn" href="#enquiryy">Send Enquiry</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © 2025 Loco Home Service Company. All rights reserved.
+    </div>
+  </footer>
+</body>
+</html>

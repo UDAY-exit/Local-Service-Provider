@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home Services & Products E-Commerce</title>
+<link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/product.css') }}"
+    />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+     {% include 'nav.html'  %}
+  {% block title %}{% endblock %}
+
+  {% block main %}
+  {% endblock %}
+  
+    <div class="header-inner">
+      <button id="cart-button" aria-label="Shopping Cart">
+        <i class="fas fa-shopping-cart fa-lg"></i>
+        
+      </button>
+    </div>
+
+
+  <main class="main">
+    <section class="search-section">
+      <label for="search-input">Search Products</label>
+      <div class="search-wrapper">
+        <input type="search" id="search-input" placeholder="Search products...">
+        <span class="search-icon"><i class="fas fa-search"></i></span>
+      </div>
+    </section>
+
+    <section id="products" class="product-section">
+      <h2>Products</h2>
+      <div id="product-list" class="product-list">
+        <article class="product">
+          <img src="https://storage.googleapis.com/a1aa/image/e16cffa5-279f-4e49-c9d3-9b28ec8c04fe.jpg" alt="Multi-Surface Cleaner">
+          <h3>Multi-Surface Cleaner</h3>
+          <p>Effective cleaner for all surfaces including glass, wood, and tiles.</p>
+          <span class="price">$12.99</span>
+          <input type="number" value="1" min="1" id="qty-1">
+          <button class="add-to-cart-btn" data-id="1">Add to Cart</button>
+        </article>
+
+        <article class="product">
+          <img src="https://storage.googleapis.com/a1aa/image/aa097416-ad15-4c54-556b-c8b734ed680e.jpg" alt="Vacuum Cleaner">
+          <h3>Vacuum Cleaner</h3>
+          <p>Powerful suction vacuum cleaner with HEPA filter for deep cleaning.</p>
+          <span class="price">$89.99</span>
+          <input type="number" value="1" min="1" id="qty-2">
+          <button class="add-to-cart-btn" data-id="2">Add to Cart</button>
+        </article>
+
+        <article class="product">
+          <img src="https://storage.googleapis.com/a1aa/image/0a2dcf76-49a2-47ff-11a6-79479779c38b.jpg" alt="LED Desk Lamp">
+          <h3>LED Desk Lamp</h3>
+          <p>Energy-efficient desk lamp with adjustable brightness and color temperature.</p>
+          <span class="price">$29.99</span>
+          <input type="number" value="1" min="1" id="qty-3">
+          <button class="add-to-cart-btn" data-id="3">Add to Cart</button>
+        </article>
+
+        <article class="product">
+          <img src="https://storage.googleapis.com/a1aa/image/05c8d94d-41c4-4066-a0b9-31a0e2236f56.jpg" alt="Portable Power Bank">
+          <h3>Portable Power Bank</h3>
+          <p>High capacity power bank with fast charging and multiple USB ports.</p>
+          <span class="price">$39.99</span>
+          <input type="number" value="1" min="1" id="qty-4">
+          <button class="add-to-cart-btn" data-id="4">Add to Cart</button>
+        </article>
+
+        <article class="product">
+          <img src="https://storage.googleapis.com/a1aa/image/c1f4a25f-033d-469f-d473-ce0c40ac7931.jpg" alt="Professional House Cleaning">
+          <h3>Professional House Cleaning</h3>
+          <p>Thorough cleaning service for your entire home, including dusting, vacuuming, and mopping.</p>
+          <span class="price">$99.00</span>
+          <input type="number" value="1" min="1" id="qty-5">
+          <button class="add-to-cart-btn" data-id="5">Add to Cart</button>
+        </article>
+
+        <article class="product">
+          <img src="https://storage.googleapis.com/a1aa/image/dbb80729-0e5d-428d-1bd1-cf618f89cd1b.jpg" alt="Electrical Repair Service">
+          <h3>Electrical Repair Service</h3>
+          <p>Certified electricians to fix wiring, outlets, switches, and electrical panels safely.</p>
+          <span class="price">$120.00</span>
+          <input type="number" value="1" min="1" id="qty-6">
+          <button class="add-to-cart-btn" data-id="6">Add to Cart</button>
+        </article>
+
+        <article class="product">
+          <img src="https://storage.googleapis.com/a1aa/image/e14fc699-b76c-4afb-d426-9d51bd7ba5e4.jpg" alt="Copper Electrical Wire (100m)">
+          <h3>Copper Electrical Wire (100m)</h3>
+          <p>High-quality insulated copper wire suitable for residential and commercial wiring.</p>
+          <span class="price">$75.00</span>
+          <input type="number" value="1" min="1" id="qty-7">
+          <button class="add-to-cart-btn" data-id="7">Add to Cart</button>
+        </article>
+
+        <article class="product">
+          <img src="https://storage.googleapis.com/a1aa/image/4b6c795e-1cca-447d-4ed0-816bdd640cb5.jpg" alt="LED Ceiling Light">
+          <h3>LED Ceiling Light</h3>
+          <p>Energy-saving LED ceiling light with bright and even illumination.</p>
+          <span class="price">$55.00</span>
+          <input type="number" value="1" min="1" id="qty-8">
+          <button class="add-to-cart-btn" data-id="8">Add to Cart</button>
+        </article>
+
+<article class="product">
+  <img src="https://www.vitolighting.com/1472-5146-big_default/smart-led-bulb-saga-a60-e27-10w-850lm-rgbcct-wifi-1518700-vito.jpg" alt="Smart LED Bulb">
+  <h3>Smart LED Bulb</h3>
+  <p>Color-changing LED bulb compatible with Alexa and Google Assistant.</p>
+  <span class="price">$18.99</span>
+  <input type="number" value="1" min="1" id="qty-9">
+  <button class="add-to-cart-btn" data-id="9">Add to Cart</button>
+</article>
+
+<article class="product">
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQc8rKHW1wYyr2xHj-BEieleQcs0rG7DZI8xw&s" alt="Cordless Drill">
+  <h3>Cordless Drill</h3>
+  <p>Rechargeable drill with LED light, ideal for home repairs and projects.</p>
+  <span class="price">$65.50</span>
+  <input type="number" value="1" min="1" id="qty-10">
+  <button class="add-to-cart-btn" data-id="10">Add to Cart</button>
+</article>
+
+<article class="product">
+  <img src="https://havells.com/media/catalog/product/cache/844a913d283fe95e56e39582c5f2767b/f/h/fhcam1secc48e_1.jpg" alt="Ceiling Fan">
+  <h3>Ceiling Fan</h3>
+  <p>Modern 3-blade fan with remote and energy-efficient operation.</p>
+  <span class="price">$75.00</span>
+  <input type="number" value="1" min="1" id="qty-11">
+  <button class="add-to-cart-btn" data-id="11">Add to Cart</button>
+</article>
+
+<article class="product">
+  <img src="https://m.media-amazon.com/images/I/71FKCTnoozL.jpg" alt="Cleaning Kit">
+  <h3>Home Cleaning Kit</h3>
+  <p>Complete cleaning tools for dusting, mopping, and scrubbing every surface.</p>
+  <span class="price">$29.99</span>
+  <input type="number" value="1" min="1" id="qty-12">
+  <button class="add-to-cart-btn" data-id="12">Add to Cart</button>
+</article>
+
+<article class="product">
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkRwsctu_qpDgztdP0gdW1TPMyZKtCDN1riw&s" alt="Plumbing Tool Set">
+  <h3>Plumbing Tool Set</h3>
+  <p>Durable tools for faucet repairs, pipe fittings, and more.</p>
+  <span class="price">$45.00</span>
+  <input type="number" value="1" min="1" id="qty-13">
+  <button class="add-to-cart-btn" data-id="13">Add to Cart</button>
+</article>
+
+<article class="product">
+  <img src="https://www.vguard.in/uploads/product/vinsta-bg.jpg" alt="Instant Water Heater">
+  <h3>Instant Water Heater</h3>
+  <p>Compact and quick heating unit for bathroom and kitchen use.</p>
+  <span class="price">$88.00</span>
+  <input type="number" value="1" min="1" id="qty-14">
+  <button class="add-to-cart-btn" data-id="14">Add to Cart</button>
+</article>
+
+
+<article class="product">
+  <img src="https://5.imimg.com/data5/SELLER/Default/2022/8/IP/GE/DF/102188913/microfiber-floor-mop-500x500-500x500.jpg" alt="Floor Mop Set">
+  <h3>Microfiber Floor Mop</h3>
+  <p>360° rotating mop with bucket, wringer, and extra microfiber pads.</p>
+  <span class="price">$24.99</span>
+  <input type="number" value="1" min="1" id="qty-30">
+  <button class="add-to-cart-btn" data-id="30">Add to Cart</button>
+</article>
+
+
+
+<article class="product">
+  <img src="https://m.media-amazon.com/images/I/41JnIJtq3OS._UF1000,1000_QL80_.jpg" alt="Cleaning Gloves">
+  <h3>Reusable Cleaning Gloves</h3>
+  <p>Latex gloves with grip texture, perfect for kitchen and bathroom use.</p>
+  <span class="price">$5.50</span>
+  <input type="number" value="1" min="1" id="qty-31">
+  <button class="add-to-cart-btn" data-id="32">Add to Cart</button>
+</article>
+
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Cart Modal -->
+  <div id="cart-modal" class="cart-modal" aria-hidden="true">
+    <div class="cart-content">
+      <button id="close-cart" aria-label="Close cart">&times;</button>
+      <h3>Your Cart</h3>
+      <div id="cart-items">
+        <p>Your cart is empty.</p>
+      </div>
+      <div class="cart-footer">
+        <span id="cart-total">Total: $0.00</span>
+        <button id="order-button" disabled>Place Order</button>
+      </div>
+    </div>
+  </div>
+
+
+
+  
+ {% include 'footer.html'  %}
+
+
+  
+  
+
+    <script src="{{ url_for('static', filename='js/product.js') }}"></script>
+</body>
+</html>

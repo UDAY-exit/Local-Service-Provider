@@ -1,0 +1,180 @@
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #f3f4f6;
+  color: #1f2937;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.navbar {
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position: relative;
+  align-items: center;
+  border-radius: 20px;
+   background: linear-gradient(90deg, #030303, #031e56);
+  margin: 15px 60px;
+  z-index: 1000;
+  font-weight: 600;
+  font-size: 16px;
+  border: 2px solid white;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.logo a {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+}
+
+.logo img {
+  height: 42px;
+  width: 90px;
+  
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.7);
+  background-color: #000;
+}
+
+/* Desktop menu */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+
+.nav-links li a {
+  padding: 10px 16px;
+  color: #e5e7eb;
+  border-radius: 8px;
+  font-weight: 600;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.3);
+}
+
+.login_btn {
+  height: 44px;
+  min-width: 120px;
+  background: linear-gradient(90deg, #030303, #031e56);
+  color: black;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.4s ease, box-shadow 0.3s ease;
+  font-size: 16px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+  box-shadow: 0 6px 15px rgba(229, 231, 235, 0.7);
+}
+
+.login_btn a {
+  color: inherit;
+  width: 100%;
+  text-align: center;
+  display: block;
+}
+
+.login_btn:hover {
+  background: linear-gradient(90deg, #121315, #272828);
+  box-shadow: 0 8px 20px rgba(229, 231, 235, 0.9);
+}
+
+/* Hamburger icon */
+.menu-icon {
+  display: none;
+  font-size: 26px;
+  color: #d1d5db;
+  cursor: pointer;
+}
+
+/* Mobile menu hidden by default */
+.mobile-menu {
+  display: none;
+}
+
+/* Hidden checkbox to toggle menu */
+.menu-checkbox {
+  display: none;
+}
+
+/* Show mobile menu when checkbox is checked */
+.menu-checkbox:checked ~ .mobile-menu {
+  display: flex;
+  flex-direction: column;
+  background-color: #111827;
+  box-shadow: 0 8px 24px rgba(255, 255, 255, 0.3);
+  padding: 16px 32px;
+  position: absolute;
+  top: 100%;
+  left: 15px;
+  right: 15px;
+  z-index: 999;
+  border-radius: 16px;
+  animation: slideDown 0.3s ease forwards;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.mobile-menu li a {
+  padding: 16px 0;
+  display: block;
+  color: #e5e7eb;
+  border-bottom: 1px solid #374151;
+  font-weight: 600;
+  font-size: 17px;
+  transition: color 0.3s ease;
+}
+
+.mobile-menu li a:last-child {
+  border-bottom: none;
+}
+
+.mobile-menu li a:hover {
+  color: white;
+  font-weight: 700;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+}

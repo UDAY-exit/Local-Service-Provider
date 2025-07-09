@@ -1,0 +1,209 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  background: #fffbea;
+  color: #3a3a3a;
+}
+
+.holder {
+  max-width: 100%;
+  margin: auto;
+  padding: 0 20px;
+   
+}
+
+.hero {
+  background: white;
+  padding: 60px 20px;
+  border-radius: 24px;
+  position: relative;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.1;
+  z-index: -1;
+  border-radius: 24px;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  color: #d97706;
+  margin-bottom: 10px;
+}
+
+.hero h2 {
+  font-size: 1.8rem;
+  color: #d97706;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  color: #92400e;
+  margin-bottom: 30px;
+}
+
+.hero a {
+  background: #facc15;
+  color: #fff;
+  padding: 12px 30px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.services {
+  text-align: center;
+  margin-top: 80px;
+gap: 30px;
+}
+
+.services h3 {
+  font-size: 2rem;
+  color: #b45309;
+  margin-bottom: 40px;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  
+}
+
+.service-card {
+  background: white;
+  padding: 30px;
+  border-radius: 24px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: 0.3s ease;
+  text-align: center;
+}
+
+.service-card:hover {
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+.service-card img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 6px solid #facc15;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  margin-bottom: 20px;
+}
+
+.service-card h4 {
+  color: #d97706;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.service-card .price {
+  color: #92400e;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.about {
+  margin-top: 80px;
+  text-align: center;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.about-content img {
+  width: 90%;
+  max-width: 400px;
+  border-radius: 24px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.about-content p {
+  color: #92400e;
+  font-size: 1.1rem;
+  max-width: 600px;
+}
+
+.booking {
+  margin-top: 80px;
+  background: linear-gradient(to right, #fef3c7, #fde68a);
+  padding: 40px;
+  border-radius: 24px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.booking h3 {
+  text-align: center;
+  color: #b45309;
+  margin-bottom: 30px;
+}
+
+.booking form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.booking label {
+  font-weight: 600;
+  color: #92400e;
+}
+
+.booking input,
+.booking textarea {
+  padding: 12px;
+  border-radius: 12px;
+  border: 2px solid #facc15;
+}
+
+.booking input[readonly],
+.booking textarea[readonly] {
+  background: #fef9c3;
+  cursor: not-allowed;
+}
+
+.booking button {
+  background: #facc15;
+  color: white;
+  padding: 14px;
+  border: none;
+  border-radius: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.booking button:hover {
+  transform: scale(1.05);
+  background: #eab308;
+}
+
+.contact-info {
+  text-align: center;
+  margin-top: 30px;
+  color: #92400e;
+  font-weight: 600;
+}
+
+.contact-info i {
+  color: #facc15;
+  margin-right: 8px;
+}

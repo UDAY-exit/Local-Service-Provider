@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/home.css') }}"
+    />
+  </head>
+  <body>
+  {% include 'nav.html'  %}
+  {% block title %}{% endblock %}
+
+  {% block main %}
+  {% endblock %}
+
+<!-- enquiry section -->
+<div class="form-container">
+  
+  <!-- animated text -->
+ <div class="container">
+    <h1 class="hero-title">
+      <span class="fadeInUp colorChange delay-0 inline-block">NO MESS</span><br />
+      <span class="fadeInUp colorChangee delay-0   inline-block">NO STRESS</span><br />
+      <span  class="fadeInUp colorChangee delay-0   inline-block">JUST EXPERT SERVICE</span>
+    </h1>
+    
+  </div>
+<!-- end -->
+
+
+<form id="enquiryy" class="form" method="POST" action="{{ url_for('send_enquiry') }}">
+  <div class="form-inner">
+    <p class="subtext">We'll send you contact details in seconds for free</p>
+    <br>
+
+    <fieldset class="radio-group">
+      <label>
+        <input type="radio" name="property" value="Cleaning Services" checked />
+        <span>Cleaning Services</span>
+      </label>
+      <label>
+        <input type="radio" name="property" value="Plumbing Services" />
+        <span>Plumbing Services</span>
+      </label>
+      <label>
+        <input type="radio" name="property" value="Electrical Services" />
+        <span>Electrical Services</span>
+      </label>
+      <label>
+        <input type="radio" name="property" value="Home Repair Services" />
+        <span>Home Repair Services</span>
+      </label>
+    </fieldset>
+
+    <br>
+
+    <div class="input-group">
+      <label for="name" class="sr-only">Name</label>
+      <div class="input-wrapper">
+        <span class="icon"><i class="fas fa-user"></i></span>
+        <input id="nam-e" name="name" type="text" placeholder="Name" required />
+      </div>
+    </div>
+
+    <br>
+
+    <div class="input-group">
+      <label for="mobile" class="sr-only">Mobile Number</label>
+      <div class="input-wrapper">
+        <span class="icon"><i class="fas fa-mobile-alt"></i></span>
+        <input id="mobil-e" name="mobile" type="tel" placeholder="Mobile Number" required />
+      </div>
+    </div>
+
+    <button type="submit" class="submit-btn">
+      <span>Send Enquiry</span>
+    </button>
+  </div>
+</form>
+
+
+</div>
+
+
+<!-- running images -->
+
+    <div class="carousel">
+      <div class="carousel-track">
+        <img
+          src="{{ url_for('static', filename='assets/cln-sofa-img.png') }}"
+          alt="Image 1"
+        />
+        <img
+          src="{{ url_for('static', filename='assets/tap-img.png') }}"
+          alt="Image 2"
+        />
+        <img
+          src="{{ url_for('static', filename='assets/elec-img.avif') }}"
+          alt="Image 3"
+        />
+        <img
+          src="{{ url_for('static', filename='assets/tool-img.avif') }}"
+          alt="Image 4"
+        />
+        <img
+          src="{{ url_for('static', filename='assets/towel-img.avif') }}"
+          alt="Image 5"
+        />
+
+        <!-- repeat for infinite loop -->
+        <img
+          src="{{ url_for('static', filename='assets/cln-sofa-img.png') }}"
+          alt="Image 1"
+        />
+        <img
+          src="{{ url_for('static', filename='assets/tap-img.png') }}"
+          alt="Image 2"
+        />
+        <img
+          src="{{ url_for('static', filename='assets/elec-img.avif') }}"
+          alt="Image 3"
+        />
+        <img
+          src="{{ url_for('static', filename='assets/tool-img.avif') }}"
+          alt="Image 4"
+        />
+        <img
+          src="{{ url_for('static', filename='assets/towel-img.avif') }}"
+          alt="Image 5"
+        />
+      </div>
+    </div>
+
+    <!-- Number section -->
+
+      <section class="numbers-section">
+    <h2 class="section-title">Why Choose Our Home Services</h2>
+    <div class="numbers-grid">
+      <div class="number-box">
+        <img src="https://storage.googleapis.com/a1aa/image/68709c10-14fd-4248-c1fd-314b76e5e497.jpg" alt="Technician" class="icon-img"/>
+        <span class="number" id="experts">150+</span>
+        <span class="label">Expert Technicians</span>
+        <div class="divider"></div>
+      </div>
+      <div class="number-box">
+        <img src="https://storage.googleapis.com/a1aa/image/3d1ba0e3-0ba4-494f-4245-be45bd910b21.jpg" alt="Happy Customers" class="icon-img"/>
+        <span class="number" id="customers">10K+</span>
+        <span class="label">Satisfied Customers</span>
+        <div class="divider"></div>
+      </div>
+      <div class="number-box">
+        <img src="https://storage.googleapis.com/a1aa/image/85445580-5c52-4bcf-a95c-19679342666d.jpg" alt="Country Map" class="icon-img"/>
+        <span class="number" id="serviceArea">1</span>
+        <span class="label">Country Covered</span>
+        <div class="divider"></div>
+      </div>
+      <div class="number-box">
+        <img src="https://storage.googleapis.com/a1aa/image/9577ad1d-54cb-4ce5-40f6-b21ebc77a462.jpg" alt="Services" class="icon-img"/>
+        <span class="number" id="services">12</span>
+        <span class="label">Service Specialties</span>
+        <div class="divider"></div>
+      </div>
+    </div>
+  </section>
+
+
+<!-- end -->
+    <section>
+    <div class="main-content">
+      <div class="services-container">
+
+        <a href="{{ url_for('cleaning_service') }}"  tabindex="-1" aria-hidden="true" rel="noopener noreferrer" class="service-card">
+          <img src="https://storage.googleapis.com/a1aa/image/4e790c41-c130-4e18-851f-5c4ad05605e4.jpg" alt="Cleaning Services" class="service-img"/>
+          <div class="service-text">
+            <h2>Cleaning Services</h2>
+            <p>
+              We provide top-notch cleaning<br/>
+              services for your home and<br/>
+              office with eco-friendly products.
+            </p>
+          </div>
+        </a>
+
+        <a href="{{ url_for('plumbing_service') }}"  tabindex="-1" aria-hidden="true" rel="noopener noreferrer" class="service-card">
+          <img src="https://storage.googleapis.com/a1aa/image/b3d613f0-c549-4257-41aa-1a55897c697b.jpg" alt="Plumbing Services" class="service-img"/>
+          <div class="service-text">
+            <h2>Plumbing Services</h2>
+            <p>
+              Expert plumbing services to fix<br/>
+              all your water-related issues<br/>
+              quickly and reliably.
+            </p>
+          </div>
+        </a>
+
+        <a href="{{ url_for('electrical_service') }}"  tabindex="-1" aria-hidden="true" rel="noopener noreferrer" class="service-card">
+          <img src="https://storage.googleapis.com/a1aa/image/bd2b43d4-a93f-48db-1a27-69f1d347946c.jpg" alt="Electrical Services" class="service-img"/>
+          <div class="service-text">
+            <h2>Electrical Services</h2>
+            <p>
+              Certified electricians for all your<br/>
+              electrical installations,<br/>
+              repairs, and maintenance.
+            </p>
+          </div>
+        </a>
+
+        <a href="{{ url_for('home_repair_service') }}"  tabindex="-1" aria-hidden="true" rel="noopener noreferrer" class="service-card">
+          <img src="https://storage.googleapis.com/a1aa/image/379903d6-5c1a-46c3-b85f-466e335f8c97.jpg" alt="Home Services" class="service-img"/>
+          <div class="service-text">
+            <h2>Home Services</h2>
+            <p>
+              Comprehensive home services including<br/>
+              maintenance, repairs, and improvements<br/>
+              to keep your home safe and comfortable.
+            </p>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+
+    <!-- end -->
+
+  
+
+
+
+     <section class="projects-section">
+    <h1>Our Proud Projects</h1>
+    <div class="project-images">
+      <img src="{{ url_for('static', filename='assets/hpy1.avif') }}"/>
+      <img src="{{ url_for('static', filename='assets/hpy2.avif') }}" />
+      <img src="{{ url_for('static', filename='assets/hpy3.avif') }}" />
+      <img src="{{ url_for('static', filename='assets/hpy4.avif') }}" />
+      <img src="{{ url_for('static', filename='assets/hpy5.avif') }}" />
+      <img src="{{ url_for('static', filename='assets/hpy6.avif') }}" />
+    </div>
+  </section>
+
+    <!-- review section -->
+<section class="reviews-section">
+    <h2>Customer Reviews</h2>
+    <div class="reviews-grid">
+      
+      <article class="review-card">
+        <div class="review-header">
+          <img src="https://storage.googleapis.com/a1aa/image/5bfc0759-4377-4818-7793-cad87f927b1e.jpg" alt="Manoj Dua" class="avatar"/>
+          <div class="reviewer-info">
+            <p class="reviewer-name">Manoj Dua</p>
+            <p class="review-service">Home Cleaning Service</p>
+          </div>
+          <div class="review-rating">4.5 <i class="fas fa-star"></i></div>
+        </div>
+        <p class="review-text">
+          Painting and cleaning services from NoBroker was something that I recently came to know about. Prices are really cheap since there is no middleman just...
+          <a href="#" class="read-more">see more</a>
+        </p>
+      </article>
+
+      <article class="review-card">
+        <div class="review-header">
+          <img src="https://storage.googleapis.com/a1aa/image/3655fde6-984a-480d-5fa8-67a75cfc6f23.jpg" alt="Daniel Fernandes" class="avatar"/>
+          <div class="reviewer-info">
+            <p class="reviewer-name">Daniel Fernandes</p>
+            <p class="review-service">Home Repair</p>
+          </div>
+          <div class="review-rating">4.7 <i class="fas fa-star"></i></div>
+        </div>
+        <p class="review-text">
+          These guys saved a lot of my time. I didn't have to bother about booking for the carpenter, plumber, electrician separately. They took the project and...
+          <a href="#" class="read-more">see more</a>
+        </p>
+      </article>
+
+      <article class="review-card">
+        <div class="review-header">
+          <img src="https://storage.googleapis.com/a1aa/image/0952420f-ef0e-4e16-ba52-5d4a2750ffd4.jpg" alt="Kunal Sharma" class="avatar"/>
+          <div class="reviewer-info">
+            <p class="reviewer-name">Kunal Sharma</p>
+            <p class="review-service">Painting</p>
+          </div>
+          <div class="review-rating">4.6 <i class="fas fa-star"></i></div>
+        </div>
+        <p class="review-text">
+          NoBroker. I must say is much better than all those aggregators like Housejoy and Urbanclap. NoBroker scheduled a house inspection and told me everythi...
+          <a href="#" class="read-more">see more</a>
+        </p>
+      </article>
+
+    </div>
+  </section>
+<!-- end -->
+   <section class="faq-section">
+    <h1>Loco - Frequently Asked Questions</h1>
+    <p class="subheading">
+      Your trusted home service provider. Find answers to common questions below.
+    </p>
+
+    <div class="faq-list">
+      <div>
+        <input type="checkbox" id="faq1" />
+        <label for="faq1" class="faq-question">
+          How to book a service on Loco?
+          <i class="fas fa-plus"></i>
+        </label>
+        <div class="faq-answer">
+          Booking a service on Loco is simple! Just select the service you need,
+          choose a convenient time slot, and confirm your booking. Our team will
+          take care of the rest.
+        </div>
+      </div>
+
+      <div>
+        <input type="checkbox" id="faq2" />
+        <label for="faq2" class="faq-question">
+          Who is going to fulfill the service?
+          <i class="fas fa-plus"></i>
+        </label>
+        <div class="faq-answer">
+          All services are fulfilled by our trusted and verified Loco Partners,
+          who are skilled professionals in their respective fields.
+        </div>
+      </div>
+
+      <div>
+        <input type="checkbox" id="faq3" />
+        <label for="faq3" class="faq-question">
+          Who is a Loco Partner?
+          <i class="fas fa-plus"></i>
+        </label>
+        <div class="faq-answer">
+          A Loco Partner is a verified professional who has been vetted by our
+          team to provide high-quality home services with reliability and trust.
+        </div>
+      </div>
+
+      <div>
+        <input type="checkbox" id="faq4" />
+        <label for="faq4" class="faq-question">
+          What all services are available on Loco?
+          <i class="fas fa-plus"></i>
+        </label>
+        <div class="faq-answer">
+          Loco offers a wide range of home services including plumbing, electrical,
+          cleaning, carpentry, appliance repair, pest control, and more.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr />
+
+ {% include 'footer.html'  %}
+
+
+  
+  
+
+    <script src="{{ url_for('static', filename='js/home.js') }}"></script>
+  </body>
+</html>

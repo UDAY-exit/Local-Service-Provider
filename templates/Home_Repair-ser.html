@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/Home_Repair-ser.css') }}"
+    />
+</head>
+<body>
+    
+  {% include 'nav.html'  %}
+  {% block title %}{% endblock %}
+
+  {% block main %}
+  {% endblock %}
+
+
+<main >
+    <div class="holder">
+    <!-- Hero Section -->
+    <section class="hero">
+      <img class="hero-bg" src="https://storage.googleapis.com/a1aa/image/4a2e4414-c57b-4b02-0bc8-b2fd009b6ec0.jpg" alt="Hero Background">
+      <h1>LOCO Home Repair Services</h1>
+      <h2>Reliable Repairs to Keep Your Home in Top Shape</h2>
+      <p>From small fixes to major repairs, our skilled handymen provide quality home repair services with care and professionalism.</p>
+      <a href="#booking" id="freeQuoteBtn">Get a Free Quote</a>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+      <h3>Our Services</h3>
+      <div class="service-grid">
+
+        <!-- Service Cards -->
+        <article class="service-card" data-service="Door Repair" data-price="70">
+          <img src="https://storage.googleapis.com/a1aa/image/92ad621d-be6a-44da-48e8-bbfe8564b474.jpg" alt="Door Repair">
+          <h4>Door Repair</h4>
+          <p class="price">$70 / hour</p>
+          <p>Fixing squeaky, misaligned, or damaged doors to restore smooth operation.</p>
+        </article>
+
+        <article class="service-card" data-service="Drywall Repair" data-price="80">
+          <img src="https://storage.googleapis.com/a1aa/image/128679c7-0e49-45ff-1d45-aa7703527f03.jpg" alt="Drywall Repair">
+          <h4>Drywall Repair</h4>
+          <p class="price">$80 / hour</p>
+          <p>Patching holes, cracks, and dents in walls for a smooth finish.</p>
+        </article>
+
+        <article class="service-card" data-service="Window Repair" data-price="75">
+          <img src="https://storage.googleapis.com/a1aa/image/9379a827-b052-4f41-73db-641aac382836.jpg" alt="Window Repair">
+          <h4>Window Repair</h4>
+          <p class="price">$75 / hour</p>
+          <p>Repairing broken glass, frames, and seals to improve insulation and security.</p>
+        </article>
+
+        <article class="service-card" data-service="Cabinet Repair" data-price="85">
+          <img src="https://storage.googleapis.com/a1aa/image/4a7ed6de-8b19-4145-c870-b58b11e236c2.jpg" alt="Cabinet Repair">
+          <h4>Cabinet Repair</h4>
+          <p class="price">$85 / hour</p>
+          <p>Fixing loose hinges, broken doors, and drawer issues in kitchen and bathroom cabinets.</p>
+        </article>
+
+        <article class="service-card" data-service="Floor Repair" data-price="90">
+          <img src="https://storage.googleapis.com/a1aa/image/c9ff80c4-51af-4e69-c465-cdea38d61dc8.jpg" alt="Floor Repair">
+          <h4>Floor Repair</h4>
+          <p class="price">$90 / hour</p>
+          <p>Repairing scratches, cracks, and loose floorboards for a safe and beautiful floor.</p>
+        </article>
+
+        <article class="service-card" data-service="Fence Repair" data-price="95">
+          <img src="https://storage.googleapis.com/a1aa/image/d573275d-f025-4bc3-0b21-96855245dd9e.jpg" alt="Fence Repair">
+          <h4>Fence Repair</h4>
+          <p class="price">$95 / hour</p>
+          <p>Repairing broken or damaged fence panels and gates to secure your property.</p>
+        </article>
+
+        <article class="service-card" data-service="Roof Repair" data-price="100">
+          <img src="https://storage.googleapis.com/a1aa/image/1b984e04-7d3e-496e-7b91-56644f3421e4.jpg" alt="Roof Repair">
+          <h4>Roof Repair</h4>
+          <p class="price">$100 / hour</p>
+          <p>Fixing leaks, damaged shingles, and other roofing issues to protect your home.</p>
+        </article>
+
+        <article class="service-card" data-service="Gutter Repair" data-price="110">
+          <img src="https://storage.googleapis.com/a1aa/image/3671b9fe-64aa-4b2e-3770-88970711f9bd.jpg" alt="Gutter Repair">
+          <h4>Gutter Repair</h4>
+          <p class="price">$110 / hour</p>
+          <p>Cleaning, sealing leaks, and fixing gutter alignment to ensure proper drainage.</p>
+        </article>
+
+        <article class="service-card" data-service="Painting & Touch-ups" data-price="85">
+          <img src="https://storage.googleapis.com/a1aa/image/7a1a3a3e-3a3a-4a3a-9a3a-3a3a3a3a3a3a.jpg" alt="Painting">
+          <h4>Painting & Touch-ups</h4>
+          <p class="price">$85 / hour</p>
+          <p>Interior and exterior painting services to refresh and protect your home surfaces.</p>
+        </article>
+
+        <article class="service-card" data-service="Furniture Assembly" data-price="95">
+          <img src="https://storage.googleapis.com/a1aa/image/8b8b8b8b-8b8b-4b8b-8b8b-8b8b8b8b8b8b.jpg" alt="Furniture Assembly">
+          <h4>Furniture Assembly</h4>
+          <p class="price">$95 / hour</p>
+          <p>Professional assembly of furniture items including beds, desks, and cabinets.</p>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+      <h3>About LOCO Home Repair Services</h3>
+      <div class="about-content">
+        <img src="https://storage.googleapis.com/a1aa/image/4d1c6082-cb7c-4271-2ec4-a1045c490919.jpg" alt="Handyman">
+        <p>With over 15 years of experience, LOCO Home Repair Services is your trusted partner for all home repair needs. Our skilled handymen provide reliable, affordable, and high-quality repairs to keep your home safe and comfortable.</p>
+      </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section class="booking" id="booking">
+      <h3 id="bookingTitle">Book a Service</h3>
+      <form class="form" method="POST" action="{{ url_for('homeRepair_service') }}">
+        <label for="bookingName">Full Name</label>
+        <input type="text" id="bookingName" name="bookingName" required>
+
+        <label for="bookingPhone">Phone Number</label>
+        <input type="tel" id="bookingPhone" name="bookingPhone" required>
+
+        <label for="bookingAddress">Address</label>
+        <textarea id="bookingAddress" name="bookingAddress" rows="3" required></textarea>
+
+        <label for="bookingService">Service</label>
+        <input type="text" id="bookingService" name="bookingService" readonly>
+
+        <label for="bookingPrice">Price per Hour</label>
+        <input type="text" id="bookingPrice" name="bookingPrice" readonly>
+
+        <button type="submit">Book Now</button>
+      </form>
+      <div class="contact-info">
+        <p><i class="fas fa-phone-alt"></i> (555) 123-4567</p>
+        <p><i class="fas fa-envelope"></i> info@locohomerepair.com</p>
+        <p><i class="fas fa-map-marker-alt"></i> 123 Yellow St, Repair City, RC 12345</p>
+      </div>
+    </section>
+    </div>
+  </main>
+
+
+
+    {% include 'footer.html'  %}
+    <script src="{{ url_for('static', filename='js/Home_Repair-ser.js') }}"></script>
+</body>
+</html>

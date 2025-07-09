@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About Us - Home Service</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/about.css') }}">
+    <style>
+      h3{
+        color: black;
+      }
+      p{
+        color: black;
+      }
+    </style>
+</head>
+<body>
+
+  {% include 'nav.html'  %}
+  {% block title %}{% endblock %}
+
+  {% block main %}
+  {% endblock %}
+
+
+  <header class="header pulse-glow">
+    <div class="containerr">
+      <h1 class="title bounce-scale">About Us</h1>
+    </div>
+  </header>
+  <main class="containerr main">
+    
+    <section class="intro">
+      <img src="https://storage.googleapis.com/a1aa/image/065eff9d-b37d-4eb7-fd0c-2a7796c481d4.jpg" alt="Team" class="team-img fade-in-left" />
+      <div class="intro-text fade-in-right">
+        <h2 class="section-title">Who We Are</h2>
+        <h4>At Home Service, we specialize in providing top-notch cleaning and plumbing services to keep your home comfortable, safe, and sparkling clean. With years of experience and a dedicated team of professionals, we are committed to delivering reliable, efficient, and affordable solutions tailored to your needs.</p>
+        <h4>Whether you need a thorough home cleaning or expert plumbing repairs, our skilled technicians use the latest tools and techniques to ensure your satisfaction. We pride ourselves on our attention to detail, punctuality, and friendly customer service.</p>
+        <h4>Trust Home Service to take care of your home so you can focus on what matters most. Your comfort and peace of mind are our priority.</p>
+      </div>
+    </section>
+
+
+    <section class="services">
+      <h3 class="section-heading fade-in-up">Our Services</h3>
+      <div class="cards">
+        <div class="card fade-in-left">
+          <img src="https://storage.googleapis.com/a1aa/image/3a8ff858-40ae-40ab-e0c3-38daf944d04f.jpg" alt="Cleaning" class="card-img bounce-scale">
+          <h3>Cleaning Services</h4>
+          <p>Comprehensive home cleaning including dusting, vacuuming, mopping, kitchen and bathroom sanitation, and more. We ensure your home is spotless and healthy.</p>
+        </div>
+        <div class="card fade-in-right">
+          <img src="https://storage.googleapis.com/a1aa/image/2ddfc8d4-f021-4ff4-acbb-28f2762de74a.jpg" alt="Plumbing" class="card-img bounce-scale">
+          <h3>Plumbing Services</h4>
+          <p>Expert plumbing repairs and installations including leak fixes, pipe replacements, drain cleaning, faucet repairs, and emergency plumbing services.</p>
+        </div>
+         <div class="card fade-in-left">
+          <img src="https://storage.googleapis.com/a1aa/image/549897a9-8796-4250-1ccd-4a199518aa4f.jpg" alt="Cleaning" class="card-img bounce-scale">
+          <h3>Electrical Services</h4>
+          <p>Comprehensive home cleaning including dusting, vacuuming, mopping, kitchen and bathroom sanitation, and more. We ensure your home is spotless and healthy.</p>
+        </div>
+         <div class="card fade-in-left">
+          <img src="https://storage.googleapis.com/a1aa/image/b7117d84-3730-4ec7-058a-f9bc811444ed.jpg" alt="Cleaning" class="card-img bounce-scale">
+          <h3>Home Repair Services</h4>
+          <p>Comprehensive home cleaning including dusting, vacuuming, mopping, kitchen and bathroom sanitation, and more. We ensure your home is spotless and healthy.</p>
+        </div>
+      </div>
+  
+    </section>
+  </main>
+ 
+
+ {% include 'footer.html'  %}
+
+</body>
+</html>

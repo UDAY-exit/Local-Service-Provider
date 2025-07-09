@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login and Sign Up Forms</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/loginForm.css') }}">
+{% if alert %}
+  <script>
+    alert("{{ alert }}");
+  </script>
+{% endif %}
+
+</head>
+
+<body>
+  <nav>
+    <div class="logo">
+       <img src="static/assets/web-logo.png" alt="Company Logo" />
+    </div>
+  </nav>
+  <div class="container">
+    <!-- Login Form -->
+    <div class="form-box" id="login-box">
+      <h2>Login to Your Account</h2>
+    <form id="login-form" method="POST" action="/loginHandle">
+  <label>Email address</label>
+  <input type="email" name="email" placeholder="you@example.com" required />
+
+  <label>Password</label>
+  <input type="password" name="password" placeholder="Enter your password" required />
+
+  <div class="form-options">
+    <label><input type="checkbox" /> Remember me</label>
+  </div>
+
+  <button type="submit">Login</button>
+  
+ 
+  <button type="button" id="show-signup">
+    <a href="{{ url_for('showSignupForm') }}">Signup</a>
+  </button>
+</form>
+
+    </div>
+
+
+    
+  </div>
+
+  
+</body>
+</html>

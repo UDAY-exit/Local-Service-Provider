@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/plumbing-ser.css') }}"
+    />
+</head>
+<body>
+        {% include 'nav.html'  %}
+  {% block title %}{% endblock %}
+
+  {% block main %}
+  {% endblock %}
+
+ <main >
+     <div class="holder">
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+      <img src="https://storage.googleapis.com/a1aa/image/064292d6-c699-4289-4b0a-02f0ea5afd9f.jpg" alt="Hero Background" class="hero-bg">
+      <h1>LOCO Electrical Services</h1>
+      <h2>Trusted Electrical Solutions for Your Home and Business</h2>
+      <p>From installations to repairs, our certified electricians provide safe and reliable electrical services with professionalism.</p>
+      <a href="#booking" id="freeQuoteBtn">Get a Free Quote</a>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+      <h3>Our Services</h3>
+      <div class="service-grid">
+        <!-- Each service -->
+        <article class="service-card" data-service="Electrical Repairs" data-price="85">
+          <img src="https://storage.googleapis.com/a1aa/image/2bf7e880-82f6-4f0c-6bf9-e82b9e7c03ba.jpg" alt="Electrical Repairs">
+          <h4>Electrical Repairs</h4>
+          <p class="price">$85 / hour</p>
+          <p>Fast and reliable repairs for faulty wiring, outlets, switches, and electrical panels.</p>
+        </article>
+
+        <article class="service-card" data-service="Lighting Installation" data-price="90">
+          <img src="https://storage.googleapis.com/a1aa/image/2b319298-4964-4e2c-7c0e-5c6db5bff468.jpg" alt="Lighting Installation">
+          <h4>Lighting Installation</h4>
+          <p class="price">$90 / hour</p>
+          <p>Installation of indoor and outdoor lighting fixtures, including LED and smart lighting.</p>
+        </article>
+
+        <article class="service-card" data-service="Electrical Panel Upgrade" data-price="100">
+          <img src="https://storage.googleapis.com/a1aa/image/16009b76-6ec0-4e51-2307-8f50d44b60f5.jpg" alt="Electrical Panel Upgrade">
+          <h4>Electrical Panel Upgrade</h4>
+          <p class="price">$100 / hour</p>
+          <p>Upgrade your electrical panel to handle increased power demands safely and efficiently.</p>
+        </article>
+
+        <article class="service-card" data-service="Outlet & Switch Installation" data-price="75">
+          <img src="https://storage.googleapis.com/a1aa/image/458cae07-eeac-4378-ea72-2aafd50c7afb.jpg" alt="Outlet & Switch Installation">
+          <h4>Outlet & Switch Installation</h4>
+          <p class="price">$75 / hour</p>
+          <p>Installation and replacement of electrical outlets, switches, and USB charging ports.</p>
+        </article>
+
+        <article class="service-card" data-service="Emergency Electrical Services" data-price="120">
+          <img src="https://storage.googleapis.com/a1aa/image/d622674a-44d1-4143-a183-938efc8b599f.jpg" alt="Emergency Electrical Services">
+          <h4>Emergency Electrical Services</h4>
+          <p class="price">$120 / hour</p>
+          <p>24/7 emergency electrical repairs to restore power and ensure safety.</p>
+        </article>
+
+        <article class="service-card" data-service="Ceiling Fan Installation" data-price="95">
+          <img src="https://storage.googleapis.com/a1aa/image/f1a8a12a-2948-4f2a-6c03-dfaea44333a5.jpg" alt="Ceiling Fan Installation">
+          <h4>Ceiling Fan Installation</h4>
+          <p class="price">$95 / hour</p>
+          <p>Professional installation of ceiling fans to improve air circulation and comfort.</p>
+        </article>
+
+        <article class="service-card" data-service="Smoke Detector Installation" data-price="110">
+          <img src="https://storage.googleapis.com/a1aa/image/1ddae517-e05a-4ab6-8649-641edcebab75.jpg" alt="Smoke Detector Installation">
+          <h4>Smoke Detector Installation</h4>
+          <p class="price">$110 / hour</p>
+          <p>Installation and maintenance of smoke and carbon monoxide detectors for your safety.</p>
+        </article>
+
+        <article class="service-card" data-service="Electrical Safety Inspection" data-price="80">
+          <img src="https://storage.googleapis.com/a1aa/image/44057d70-63a7-4a60-cbf0-dcbb964ab888.jpg" alt="Electrical Safety Inspection">
+          <h4>Electrical Safety Inspection</h4>
+          <p class="price">$80 / hour</p>
+          <p>Comprehensive inspection to identify electrical hazards and ensure code compliance.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+      <h3>About LOCO Electrical Services</h3>
+      <div class="about-content">
+        <img src="https://storage.googleapis.com/a1aa/image/47fdf1cd-b3b2-42b1-1a2c-c27461926149.jpg" alt="Our Team">
+        <p>
+          With over 15 years of experience, LOCO Electrical Services is dedicated to providing safe, efficient, and high-quality electrical solutions. Our licensed electricians use the latest tools and techniques to ensure your home or business is powered safely and reliably.
+        </p>
+      </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section class="booking" id="booking">
+      <h3 id="bookingTitle">Book a Service</h3>
+      <form class="form" method="POST" action="{{ url_for('electrical_enquiry') }}">
+        <label for="bookingName">Full Name</label>
+        <input type="text" id="bookingName" name="bookingName" required placeholder="Your full name">
+
+        <label for="bookingPhone">Phone Number</label>
+        <input type="tel" id="bookingPhone" name="bookingPhone" required placeholder="(123) 456-7890">
+
+        <label for="bookingAddress">Address</label>
+        <textarea id="bookingAddress" name="bookingAddress" rows="3" required placeholder="Your address"></textarea>
+
+        <label for="bookingService">Service</label>
+        <input type="text" id="bookingService" name="bookingService" readonly>
+
+        <label for="bookingPrice">Price per Hour</label>
+        <input type="text" id="bookingPrice" name="bookingPrice" readonly>
+
+        <button type="submit">Book Now</button>
+      </form>
+      <div class="contact-info">
+        <p><i class="fas fa-phone-alt"></i> Phone: (555) 123-4567</p>
+        <p><i class="fas fa-envelope"></i> Email: info@locoelectrical.com</p>
+        <p><i class="fas fa-map-marker-alt"></i> 123 Yellow St, Electric City, EC 12345</p>
+      </div>
+    </section>
+    </div>
+  </main>
+
+
+
+  {% include 'footer.html'  %}
+   <script src="{{ url_for('static', filename='js/Electrical-ser.js') }}"></script>
+</body>
+</html>

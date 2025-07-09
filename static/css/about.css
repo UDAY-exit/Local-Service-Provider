@@ -1,0 +1,139 @@
+@import "/static/css/nav.css";
+@import "/static/css/footer.css";
+
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  background-color: yellow;
+}
+.containerr {
+  max-width: 1140px;
+  margin: auto;
+  padding: 0 20px;
+  justify-content: center;
+  text-align: center;
+}
+
+.header {
+  background-color: #2563eb;
+  padding: 40px 0;
+  text-align: center;
+  color: white;
+  height: 30px;
+}
+.title {
+  font-size: 2rem;
+  animation: bounceScale 2s ease-in-out infinite;
+}
+.main {
+  padding: 80px 0;
+  display: block;
+}
+.intro {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.intro img {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.intro-text {
+  flex: 1;
+}
+.section-title {
+  font-size: 2rem;
+  color: #2563eb;
+  margin-bottom: 20px;
+}
+.services {
+  margin-top: 60px;
+}
+.section-heading {
+  text-align: center;
+  color: #2563eb;
+  font-size: 1.75rem;
+  margin-bottom: 40px;
+}
+.cards {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.card {
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 20px;
+  width: 280px;
+  text-align: center;
+  border-radius: 8px;
+  transition: box-shadow 0.3s ease;
+}
+.card:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+.card-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+.fade-in-left {
+  animation: fadeInLeft 1s ease forwards;
+}
+
+.fade-in-right {
+  animation: fadeInRight 1s ease forwards;
+}
+
+.fade-in-up {
+  animation: fadeInUp 1s ease forwards;
+}
+
+.bounce-scale {
+  animation: bounceScale 2s ease-in-out infinite;
+}
+
+/* Animations */
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounceScale {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}

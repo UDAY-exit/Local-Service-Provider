@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Thoughtful AI Operating System</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/services.css') }}"
+    />
+  </head>
+  <body>
+    {% include 'nav.html' %} {% block title %}{% endblock %} {% block main %} {%
+    endblock %}
+
+    <h1 class="services-title" id="services">Our Services</h1>
+    <div aria-label="List of services" class="services" role="list">
+      <!-- Cleaning Service -->
+      <a
+        aria-label="Cleaning Service"
+        class="service-box"
+        href="{{ url_for('cleaning_service') }}"
+        role="listitem"
+        tabindex="0"
+        
+    
+      >
+        <div class="service-circle">
+          <img
+            alt="Professional cleaner scrubbing floor with mop in bright room"
+            height="320"
+            src="https://storage.googleapis.com/a1aa/image/2bbcfb47-f8d7-4f8a-6849-d4dee2fb85f8.jpg"
+            width="320"
+          />
+        </div>
+        <h2 class="caption">Cleaning Service</h2>
+      </a>
+      <!-- Plumbing Service -->
+      <a
+        aria-label="Plumbing Service"
+        class="service-box"
+        href="{{ url_for('plumbing_service') }}"
+        role="listitem"
+        tabindex="0"
+        
+      >
+        <div class="service-circle">
+          <img
+            alt="Plumber fixing pipe under sink with wrench"
+            height="320"
+            src="https://storage.googleapis.com/a1aa/image/40d067a8-4378-4563-ccb2-0a586522a58e.jpg"
+            width="320"
+          />
+        </div>
+        <h2 class="caption">Plumbing Service</h2>
+      </a>
+      <!-- Electrical Service -->
+      <a
+        aria-label="Electrical Service"
+        class="service-box"
+        href="{{ url_for('electrical_service') }}"
+        role="listitem"
+        tabindex="0"
+        
+      >
+        <div class="service-circle">
+          <img
+            alt="Electrician working on electrical panel with tools"
+            height="320"
+            src="https://storage.googleapis.com/a1aa/image/549897a9-8796-4250-1ccd-4a199518aa4f.jpg"
+            width="320"
+          />
+        </div>
+        <h2 class="caption">Electrical Service</h2>
+      </a>
+      <!-- Home Repair Service -->
+      <a
+        aria-label="Home Repair Service"
+        class="service-box"
+        href="{{ url_for('home_repair_service') }}"
+        role="listitem"
+        tabindex="0"
+        
+      >
+        <div class="service-circle">
+          <img
+            alt="Handyman repairing home door frame"
+            height="320"
+            src="https://storage.googleapis.com/a1aa/image/b7117d84-3730-4ec7-058a-f9bc811444ed.jpg"
+            width="320"
+          />
+        </div>
+        <h2 class="caption">Home Repair Service</h2>
+      </a>
+    </div>
+    {% include 'footer.html' %}
+    <script src="{{ url_for('static', filename='js/services.js') }}"></script>
+  </body>
+</html>

@@ -1,0 +1,96 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+}
+
+body {
+  font-family: Arial, sans-serif;
+ background: linear-gradient(to right, #030303, #031e56);
+  
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.logo{
+      display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logo img{
+  height: 80px;
+}
+.container {
+  width: 100%;
+  max-width: 500px;
+  padding: 30px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1); /* transparent white */
+  backdrop-filter: blur(10px);          /* blur background for glass effect */
+  -webkit-backdrop-filter: blur(10px);  /* for Safari support */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  color: white; /* optional: to contrast better with dark gradient */
+  margin: 50px auto;
+}
+
+.form-box {
+  display: block;
+}
+
+h2 {
+  margin-bottom: 20px;
+  color: white;
+  text-align: center;
+}
+
+label {
+  display: block;
+  margin: 15px 0 5px;
+  font-weight: bold;
+  color: white;
+}
+
+input[type="email"],
+input[type="password"],
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button[type="submit"],
+button[type="button"] {
+  margin-top: 20px;
+  width: 100%;
+  padding: 12px;
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #357bd8;
+}
+
+p {
+  margin-top: 15px;
+  text-align: center;
+}
+
+p a {
+  color:white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+p a:hover {
+  text-decoration: underline;
+}

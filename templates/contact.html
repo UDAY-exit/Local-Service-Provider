@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact Page</title>
+  <title>Thoughtful AI Operating System</title>
+     <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/contact.css') }}"
+    />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+  
+</head>
+<body>
+  {% include 'nav.html'  %}
+  {% block title %}{% endblock %}
+
+  {% block main %}
+  {% endblock %}
+
+
+
+  <div class="containerr">
+    <!-- Contact Info Top -->
+    <div class="contact-info">
+      <div class="info-box">
+        <div class="icon-box"><i class="far fa-envelope"></i></div>
+        <div>
+          <p class="info-title">Send Email</p>
+          <p class="info-detail">loco@gmail.com</p>
+        </div>
+      </div>
+      <div class="info-box">
+        <div class="icon-box"><i class="fas fa-phone-alt"></i></div>
+        <div>
+          <p class="info-title">Call Us Now</p>
+          <p class="info-detail">+91 123 (4567) 890</p>
+        </div>
+      </div>
+      <div class="info-box">
+        <div class="icon-box"><i class="fas fa-map-marker-alt"></i></div>
+        <div>
+          <p class="info-title">Location</p>
+          <p class="info-detail">Hamirpur(HP)</p>
+        </div>
+      </div>
+      <div class="info-box">
+        <div class="icon-box"><i class="far fa-clock"></i></div>
+        <div>
+          <p class="info-title">Update Info</p>
+          <p class="info-detail">24/7 Support</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Section -->
+    <div class="main-section">
+      <!-- Left Image Area -->
+      <div class="image-box">
+        <img src="https://storage.googleapis.com/a1aa/image/44794b2c-ee5d-4196-e14a-ad4495b05a83.jpg" alt="Smiling woman" />
+        <div class="circle-decor">
+          <div class="circle c1"></div>
+          <div class="circle c2"></div>
+          <div class="circle c3"></div>
+          <div class="circle c4"></div>
+          <div class="circle c5"></div>
+        </div>
+        <div class="orange-border"></div>
+      </div>
+
+      <!-- Contact Form -->
+      <form class="form-box" method="POST" action="{{ url_for('contact_service') }}">
+        <h2>Sent A Message</h2>
+        <div class="input-row">
+          <input type="text" name="name" placeholder="Enter Name" />
+          <div class="input-email">
+            <input type="email" name="email" placeholder="Your Email" />
+            <img src="https://storage.googleapis.com/a1aa/image/07898d27-300c-4730-2f1c-9f850a64b9c0.jpg" alt="Email Icon" />
+          </div>
+        </div>
+        <input type="text" name="service" placeholder="Subject" />
+        <textarea rows="6" name="message" placeholder="Write your message"></textarea>
+        <label class="checkbox-label">
+          <input type="checkbox" />
+          I agree with all the terms & conditions
+        </label>
+        <button type="submit">
+          Submit Now <i class="fas fa-arrow-right"></i>
+        </button>
+      </form>
+    </div>
+  </div>
+  
+
+
+   {% include 'footer.html'  %}
+</body>
+</html>

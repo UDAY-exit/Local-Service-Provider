@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/plumbing-ser.css') }}"
+    />
+</head>
+<body>
+      {% include 'nav.html'  %}
+  {% block title %}{% endblock %}
+
+  {% block main %}
+  {% endblock %}
+
+
+
+ <main >
+
+    <!-- Hero Section -->
+     <div class="holder">
+    <section class="hero">
+      <img class="hero-bg" src="https://storage.googleapis.com/a1aa/image/13f65c1a-db5b-4b6e-61f9-a2781b18bb61.jpg" alt="Plumber fixing pipe" />
+      <h1>LOCO Plumbing Services</h1>
+      <h2>Reliable Plumbing Services You Can Trust</h2>
+      <p>From emergency repairs to installations, our expert plumbers provide top-notch service with a smile.</p>
+      <a href="#booking" id="freeQuoteBtn">Get a Free Quote</a>
+    </section>
+
+    <!-- Services -->
+    <section class="services" id="services">
+      <h3>Our Services</h3>
+      <div class="service-grid">
+        <article class="service-card" data-service="Leak Repair" data-price="75">
+          <img src="https://storage.googleapis.com/a1aa/image/c1cd6e63-ec8f-464d-ddb9-aebd02aba091.jpg" alt="Leak Repair" />
+          <h4>Leak Repair</h4>
+          <p class="price">$75 / hour</p>
+          <p>Fast and efficient leak detection and repair to prevent water damage and save you money.</p>
+        </article>
+
+        <article class="service-card" data-service="Drain Cleaning" data-price="65">
+          <img src="https://storage.googleapis.com/a1aa/image/b81ba460-d244-40db-9a2a-e6f124f51f53.jpg" alt="Drain Cleaning" />
+          <h4>Drain Cleaning</h4>
+          <p class="price">$65 / hour</p>
+          <p>Clearing clogged drains and pipes with professional tools to restore proper flow.</p>
+        </article>
+
+        <article class="service-card" data-service="Water Heater Installation" data-price="90">
+          <img src="https://storage.googleapis.com/a1aa/image/c715a962-bc67-436f-66fb-1419c543e911.jpg" alt="Water Heater" />
+          <h4>Water Heater Installation</h4>
+          <p class="price">$90 / hour</p>
+          <p>Installation and repair of energy-efficient water heaters to keep your hot water flowing.</p>
+        </article>
+
+        <article class="service-card" data-service="Pipe Installation" data-price="85">
+          <img src="https://storage.googleapis.com/a1aa/image/596c0b16-a5d2-4ddc-16bf-344aa1f6d34b.jpg" alt="Pipe Installation" />
+          <h4>Pipe Installation</h4>
+          <p class="price">$85 / hour</p>
+          <p>Expert pipe installation for new construction or remodeling projects with durable materials.</p>
+        </article>
+
+        <article class="service-card" data-service="Emergency Plumbing" data-price="120">
+          <img src="https://storage.googleapis.com/a1aa/image/cd141d46-fedb-4f2e-5a2f-b4ad2898969c.jpg" alt="Emergency Plumbing" />
+          <h4>Emergency Plumbing</h4>
+          <p class="price">$120 / hour</p>
+          <p>24/7 emergency plumbing services to handle urgent issues and minimize damage.</p>
+        </article>
+
+        <article class="service-card" data-service="Fixture Repair & Replacement" data-price="70">
+          <img src="https://storage.googleapis.com/a1aa/image/78d60b20-7bb3-4041-9760-ac6f337c4f92.jpg" alt="Fixture Repair" />
+          <h4>Fixture Repair & Replacement</h4>
+          <p class="price">$70 / hour</p>
+          <p>Repair or replace faucets, toilets, and other fixtures to keep your plumbing working perfectly.</p>
+        </article>
+       
+  
+
+        <article class="service-card" data-service="Toilet Repair" data-price="60">
+          <img src="https://images.unsplash.com/photo-1614389798099-e4a2a0773ef4?auto=format&fit=crop&w=400&q=80" alt="Toilet Repair" />
+          <h4>Toilet Repair</h4>
+          <p class="price">$60 / hour</p>
+          <p>Fix running, leaking, or clogged toilets quickly and efficiently to restore your bathroom’s function.</p>
+        </article>
+
+        <article class="service-card" data-service="Sewer Line Inspection" data-price="95">
+          <img src="https://images.unsplash.com/photo-1632762119281-6eaacdb71177?auto=format&fit=crop&w=400&q=80" alt="Sewer Line Inspection" />
+          <h4>Sewer Line Inspection</h4>
+          <p class="price">$95 / hour</p>
+          <p>Advanced camera inspection to detect sewer line issues without digging or damage.</p>
+        </article>
+
+        <article class="service-card" data-service="Garbage Disposal Installation" data-price="80">
+          <img src="https://images.unsplash.com/photo-1616225252651-f8e9bba08fd6?auto=format&fit=crop&w=400&q=80" alt="Garbage Disposal Installation" />
+          <h4>Garbage Disposal Installation</h4>
+          <p class="price">$80 / hour</p>
+          <p>Install or replace garbage disposals for cleaner and more efficient kitchens.</p>
+        </article>
+
+        <article class="service-card" data-service="Outdoor Plumbing" data-price="100">
+          <img src="https://images.unsplash.com/photo-1596560548464-1aa4f2090a2b?auto=format&fit=crop&w=400&q=80" alt="Outdoor Plumbing" />
+          <h4>Outdoor Plumbing</h4>
+          <p class="price">$100 / hour</p>
+          <p>Install and repair outdoor faucets, sprinklers, and water lines for your garden or lawn.</p>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+      <h3>About LOCO Plumbing Services</h3>
+      <div class="about-content">
+        <img src="https://storage.googleapis.com/a1aa/image/74f46e9e-6b25-4dc8-c0c7-2b0563bed1c9.jpg" alt="Team of plumbers" />
+        <p>With over 15 years of experience, LOCO Plumbing Services is committed to providing high-quality plumbing solutions with honesty and integrity.</p>
+      </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section class="booking hidden" id="booking">
+      <h3 id="bookingTitle">Book a Service</h3>
+      <form class="form" method="POST" action="{{ url_for('plumbing_enquiry') }}">
+        <label for="bookingName">Full Name</label>
+        <input type="text" id="bookingName" name="bookingName" required placeholder="Your full name" />
+
+        <label for="bookingPhone">Phone Number</label>
+        <input type="tel" id="bookingPhone" name="bookingPhone" required placeholder="(123) 456-7890" />
+
+        <label for="bookingAddress">Address</label>
+        <textarea id="bookingAddress" name="bookingAddress" rows="3" required placeholder="Your address"></textarea>
+
+        <label for="bookingService">Service</label>
+        <input type="text" id="bookingService" name="bookingService" readonly />
+
+        <label for="bookingPrice">Price per Hour</label>
+        <input type="text" id="bookingPrice" name="bookingPrice" readonly />
+
+        <button type="submit">Book Now</button>
+      </form>
+      <div class="contact-info">
+        <p><i class="fas fa-phone-alt"></i> Phone: (555) 123-4567</p>
+        <p><i class="fas fa-envelope"></i> Email: info@yellowplumbing.com</p>
+        <p><i class="fas fa-map-marker-alt"></i> 123 Yellow St, Plumbing City, PC 12345</p>
+      </div>
+    </section>
+  </main>
+</div>
+
+
+
+   {% include 'footer.html'  %}
+   <script src="{{ url_for('static', filename='js/plumbing-ser.js') }}"></script>
+</body>
+</html>
